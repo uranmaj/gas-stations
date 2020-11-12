@@ -1,0 +1,66 @@
+.hero {
+  background: url("../imgs/gas.jpg") no-repeat right top;
+  background-size: auto 60vh;
+  background-position-y: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+h1 {
+  font-size: 70px;
+  line-height: 1;
+}
+@media (max-width: 1050px) { 
+  .hero {
+      padding-top: 2rem;
+      padding-bottom: 5rem;
+      background-size: auto 50vh;
+      background-position-x: 50vw;
+  }
+  .hero h1{
+      font-size:50px;
+      line-height: 1;
+  }
+}
+.hero p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.hero .cta {
+  background-color: #E55145;
+}
+
+.station-green {
+  background-color: #C4CB4B;
+}
+.station-red {
+  background-color: #E55145;
+}
+
+.cta {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.cta-sm {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#station-accordion .card-header:hover {
+  background-color: #f1f1f1;
+}
+.station-list {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.station-list .cta {
+  background-color: #C4CB4B;
+}
+
+.fa-star {
+  color: #666666;
+}
+.checked {
+  color: #FFCC00;
+}

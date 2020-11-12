@@ -16,7 +16,254 @@
 
 <body>
 
-  <h1>To je tvoja bencinska postaja.</h1>
+  <!-- home page hero SECTION -->
+  <section class="hero" role="main" title="Gas Station">
+    <div class="container">
+      <h1 class="col-12 col-lg-9 pb-4 pl-0">To je tvoja bencinska postaja.</h1>
+      <p class="col-8 col-lg-6 pb-4 pl-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet urna purus. Integer mattis, magna placerat egestas rhoncus, ligula nisl consequat ex.</p>  
+      <a href="login_page.html" class="btn btn-lg btn-light cta" role="button" aria-disabled="true">Prijava</a> 
+    </div>
+  </section>
+
+  <!-- all gas stations - list SECTION -->
+  <section class="station-list bg-light">
+    <div class="container">
+     
+      <!-- gas station filter menu -->
+      <div class="container px-0 mb-4">
+        <div class="row">
+
+           <!-- simple javascript autocomplete -->
+          <div class="col-lg">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text font-weight-bold" id="kraj">Kraj</span>
+              </div>
+              <input type="text" class="form-control" placeholder="Vsi kraji" aria-label="Default" aria-describedby="kraj">
+            </div>
+          </div>
+          <!-- checkboxes -->
+          <div class="col-lg text-center my-auto">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="elektrika-check" value="">
+              <label class="form-check-label" for="elektrika-check">Elektrika</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="plin-check" value="">
+              <label class="form-check-label" for="plin-check">Plin</label>
+            </div>
+          </div>
+          <!-- select dropdown filter -->
+          <div class="col-lg">
+            <select class="custom-select">
+              <option selected>Najbolj priljubljeni</option>
+              <option value="1">Najbližji</option>
+              <option value="2">Cenejši naprej</option>
+              <option value="3">Dražji naprej</option>
+              <option value="4">Najbolje ocenjeni</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- gas station list "accordion" -->
+      <div class="accordion" id="station-accordion">
+
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-block text-left collapsed font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <div class="row">
+                  <!-- gas station name -->
+                  <div class="col-12 col-lg-4 my-auto text-center text-lg-left">BS LJUBLJANA - TIVOLSKA</div>
+                  <!-- gas prices -->
+                  <div class="col-12 col-lg-6 my-auto">
+
+                    <div class="d-inline-block" style="width: 80px; height: 40px; font-weight: 400; font-size: 13px; text-align: center;">
+                      <div class="rounded-top" style="background-color: green; color: white;">NMB-95</div>
+                      <div class="border border-top-0 rounded-bottom" style="font-weight: bold;">1.008 €</div>
+                    </div>
+                    <div class="d-inline-block" style="width: 80px; height: 40px; font-weight: 400; font-size: 13px; text-align: center;">
+                      <div class="rounded-top" style="background-color: #555555; color: white;">Dizel</div>
+                      <div class="border border-top-0 rounded-bottom" style="font-weight: bold;">1.048 €</div>
+                    </div>
+                    <div class="d-inline-block" style="width: 80px; height: 40px; font-weight: 400; font-size: 13px; text-align: center;">
+                      <div class="rounded-top" style="background-color: #C4CB4B; color: white;">Avtoplin LPG</div>
+                      <div class="border border-top-0 rounded-bottom" style="font-weight: bold;">0.583 €</div>
+                    </div>
+
+                  </div>
+                  <div class="col-12 col-lg-2 my-auto text-center text-lg-right">
+                    <!-- 5 star score -->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#station-accordion">
+            <div class="card-body">
+              <div class="row">
+
+                <div class="col-12 col-lg-4 px-lg-5 text-center text-lg-left pb-4 pb-lg-0">
+                  <p>
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt-fill" fill="#E55145" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    <strong>Tivolska cesta 43</strong><br>
+                    Petrol d.d., Ljubljana
+                  </p>
+                  <p>
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clock-fill" fill="#E55145" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    </svg>
+                    <strong>Odpiralni čas:</strong><br>
+                    vsak delavnik 06:30-20:00<br>
+                    sobote 07:00-13:00
+                  </p>
+                  <a href="company-page.html" class="btn btn-md cta-sm station-red" role="button" aria-disabled="true">Prikaži profil črpalke</a> 
+                </div>
+
+                <div class="row-8 px-4">
+                  
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chat-dots-fill" fill="#E55145" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                  </svg>  
+                  <strong>Nedavna mnenja</strong>
+                  <p>               
+                    <!-- 5 star score -->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    15.10.2020<br>
+                    Super gorivo, avto teče kot milo!
+                  </p>
+                  <p>                  
+                    <!-- 5 star score -->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    2.10.2020<br>
+                    Ob vsakem točenju goriva ena kava gratis! Priporočam.
+                  </p>
+                  <p>                  
+                    <!-- 5 star score -->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    20.9.2020<br>
+                    Odlična lokacija, odlično gorivo. Čakalna vrsta ob 12ih bila predolga.
+                  </p>
+                </div>
+
+              </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-block text-left collapsed font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <div class="row">
+                  <!-- gas station name -->
+                  <div class="col-12 col-lg-4 my-auto text-center text-lg-left">BS LJUBLJANA - ŠMARTINSKA 45</div>
+                  <!-- gas prices -->
+                  <div class="col-12 col-lg-6 my-auto">
+
+                    <div class="d-inline-block" style="width: 80px; height: 40px; font-weight: 400; font-size: 13px; text-align: center;">
+                      <div class="rounded-top" style="background-color: green; color: white;">NMB-95</div>
+                      <div class="border border-top-0 rounded-bottom" style="font-weight: bold;">0.988 €</div>
+                    </div>
+                    <div class="d-inline-block" style="width: 80px; height: 40px; font-weight: 400; font-size: 13px; text-align: center;">
+                      <div class="rounded-top" style="background-color: #555555; color: white;">Dizel</div>
+                      <div class="border border-top-0 rounded-bottom" style="font-weight: bold;">1.017 €</div>
+                    </div>
+
+                  </div>
+                  <div class="col-12 col-lg-2 my-auto text-center text-lg-right">
+                    <!-- 5 star score -->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#station-accordion">
+            <div class="card-body">
+              [vsebina nalozena iz baze in apija]
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-block text-left collapsed font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <div class="row">
+                  <!-- gas station name -->
+                  <div class="col-12 col-lg-4 my-auto text-center text-lg-left">BS LJUBLJANA - DUNAJSKA 70</div>
+                  <!-- gas prices -->
+                  <div class="col-12 col-lg-6 my-auto">
+
+                    <div class="d-inline-block" style="width: 80px; height: 40px; font-weight: 400; font-size: 13px; text-align: center;">
+                      <div class="rounded-top" style="background-color: green; color: white;">NMB-95</div>
+                      <div class="border border-top-0 rounded-bottom" style="font-weight: bold;">0.988 €</div>
+                    </div>
+                    <div class="d-inline-block" style="width: 80px; height: 40px; font-weight: 400; font-size: 13px; text-align: center;">
+                      <div class="rounded-top" style="background-color: #555555; color: white;">Dizel</div>
+                      <div class="border border-top-0 rounded-bottom" style="font-weight: bold;">1.017 €</div>
+                    </div>
+                    <div class="d-inline-block" style="width: 80px; height: 40px; font-weight: 400; font-size: 13px; text-align: center;">
+                      <div class="rounded-top" style="background-color: rgb(1, 94, 1); color: white;">NMB-100</div>
+                      <div class="border border-top-0 rounded-bottom" style="font-weight: bold;">1.123 €</div>
+                    </div>
+
+                  </div>
+                  <div class="col-12 col-lg-2 my-auto text-center text-lg-right">
+                    <!-- 5 star score -->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#station-accordion">
+            <div class="card-body">
+              [vsebina nalozena iz baze in apija]
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+      <!-- number of gas stations shown & load more button -->
+      <p class="text-muted text-center text-lg-right mb-0">prikazanih 3 izmed 168</p>
+      <div class="text-center mt-3">
+        <button type="button" class="btn btn-lg btn-light cta">Naloži več</button>
+      </div>
+
+    </div>
+    </div>
+  </section>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
